@@ -1,16 +1,16 @@
 /*
- * Colibri RPC client helpers
+ * Yonk RPC Client helpers
  *
- * Copyright (c) 2018-2021 Alexei A. Smekalkine <ikle@ikle.ru>
+ * Copyright (c) 2018-2023 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef COLIBRI_RPC_CLIENT_H
-#define COLIBRI_RPC_CLIENT_H  1
+#ifndef YONK_RPC_CLIENT_H
+#define YONK_RPC_CLIENT_H  1
 
-#include <colibri/data/json.h>
-#include <colibri/rpc/format.h>
+#include <yonk/json.h>
+#include <yonk/rpc-format.h>
 
 struct json *rpc_auth (const char *key, const char *user, const char *pass);
 
@@ -21,6 +21,6 @@ int          rpc_ans_code   (struct json *o);
 const char  *rpc_ans_reason (struct json *o);
 int          rpc_ans_format (struct json *o);
 struct json *rpc_ans_data   (struct json *o);
-int          rpc_ans_last   (struct json *o);
+bool         rpc_ans_last   (struct json *o);
 
-#endif  /* COLIBRI_RPC_CLIENT_H */
+#endif  /* YONK_RPC_CLIENT_H */

@@ -5,4 +5,6 @@ LIBNAME	= yonk-rpc
 LIBVER	= 0
 LIBREV	= 0.1
 
+DEPENDS = yonk-json
+
 include make-core.mk

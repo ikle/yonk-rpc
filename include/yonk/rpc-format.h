@@ -1,13 +1,13 @@
 /*
- * Colibri RPC answer format
+ * Yonk RPC answer format
  *
- * Copyright (c) 2018-2021 Alexei A. Smekalkine <ikle@ikle.ru>
+ * Copyright (c) 2018-2023 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef COLIBRI_RPC_FORMAT_H
-#define COLIBRI_RPC_FORMAT_H  1
+#ifndef YONK_RPC_FORMAT_H
+#define YONK_RPC_FORMAT_H  1
 
 enum rpc_format {
 	RPC_FORMAT_PLAIN	= 0,
@@ -17,4 +17,4 @@ enum rpc_format {
 	RPC_FORMAT_TABLE	= 4,
 };
 
-#endif  /* COLIBRI_RPC_FORMAT_H */
+#endif  /* YONK_RPC_FORMAT_H */
