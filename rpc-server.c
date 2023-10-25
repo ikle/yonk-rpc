@@ -68,28 +68,27 @@ struct json *rpc_ans_add (struct json *o, int format)
 	return NULL;
 }
 
-const char *rpc_req_key (struct json *o)
+static const char *json_dict_get_string (struct json *o, const char *key)
 {
-	if ((o = json_dict_lookup (o, "key")) == NULL)
+	if ((o = json_dict_lookup (o, key)) == NULL)
 		return NULL;
 
 	return json_get_string (o);
+}
+
+const char *rpc_req_key (struct json *o)
+{
+	return json_dict_get_string (o, "key");
 }
 
 const char *rpc_req_mode (struct json *o)
 {
-	if ((o = json_dict_lookup (o, "mode")) == NULL)
-		return NULL;
-
-	return json_get_string (o);
+	return json_dict_get_string (o, "mode");
 }
 
 const char *rpc_req_cmd (struct json *o)
 {
-	if ((o = json_dict_lookup (o, "cmd")) == NULL)
-		return NULL;
-
-	return json_get_string (o);
+	return json_dict_get_string (o, "cmd");
 }
 
 struct json *rpc_req_args (struct json *o)
