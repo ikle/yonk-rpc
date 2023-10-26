@@ -11,3 +11,5 @@ sysroot
 */doc/db
 */doc/html
 */doc/*.stamp
+
+fcgi

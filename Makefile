@@ -3,8 +3,8 @@ URL = https://github.com/ikle/yonk-rpc
 
 LIBNAME	= yonk-rpc
 LIBVER	= 0
-LIBREV	= 0.3
+LIBREV	= 0.4
 
-DEPENDS = pam yonk-json uuid
+DEPENDS = fcgi pam yonk-json uuid
 
 include make-core.mk
